@@ -6,6 +6,8 @@
             [clojure.test.check.properties :as prop]
             [clojure.test.check.clojure-test :as ct :refer (defspec)]))
 
+; 3.1.2
+
 (deftest test-divisor
   (is (= true  (c3/divisor? 2 4)))
   (is (= false (c3/divisor? 3 4))))
@@ -28,3 +30,11 @@
 
 (deftest test-twin-primes
   (is (= [[3 5] [5 7] [11 13] [17 19]] (take 4 c3/twin-primes))))
+
+; 3.1.5
+
+(deftest test-powers-of-2-iterated
+  (is (= [1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768] 
+       (take 16 c3/powers-of-2-it)))
+  (is (= 9223372036854775808N 
+       (last (take 64 c3/powers-of-2-it)))))
