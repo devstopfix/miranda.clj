@@ -1,4 +1,4 @@
-# miranda.clj - Functional Programming with Miranda in Clojure
+# Functional Programming with Miranda in Clojure
 
 This repository contains code examples in the functional style from the book [Functional Programming with Miranda][1] ([Dr Ian Holyer][2], 1991) translated from [Miranda][3] to [Clojure][4].
 
