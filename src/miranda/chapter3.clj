@@ -42,7 +42,7 @@
       ([ab] (let [[a b] ab] (< (Math/abs (- b a)) delta))))))
 
 (defn limit
-  "Takes a sequence of numbers, and returns the last value where successive pairs have converged"
+  "Takes a sequence of numbers, and returns the last value where successive pairs are equal to 12 decimal places"
   [ns]
   (let [ne (comp not (approx= 12))]
   (->> (partition 2 1 ns)
