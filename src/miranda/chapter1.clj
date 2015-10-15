@@ -13,7 +13,6 @@
   [n] 
   (* n n))
 
-
 ; 1.3 Programming with Functions
 
 ; 1.3.1 Combining Functions

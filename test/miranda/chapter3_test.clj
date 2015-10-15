@@ -14,12 +14,12 @@
 
 ; Test all even numbers are divisible by 2
 (defspec test-divisor-even 
-        (prop/for-all [n (gen/such-that even? gen/s-pos-int) ]
+        (prop/for-all [n (gen/such-that even? gen/s-pos-int 100) ]
           (is (c3/divisor? 2 n))))
 
 ; Test no odd numbers are divisible by 2
 (defspec test-divisor-odd 
-        (prop/for-all [n (gen/such-that odd? gen/pos-int) ]
+        (prop/for-all [n (gen/such-that odd? gen/pos-int 100) ]
           (is (not (c3/divisor? 2 n)))))
 
 (deftest test-proper-divisors
@@ -38,3 +38,18 @@
        (take 16 c3/powers-of-2-it)))
   (is (= 9223372036854775808N 
        (last (take 64 c3/powers-of-2-it)))))
+
+
+; 3.1.5 Square root by iteration
+
+(def approx12dp= (c3/approx= 12))
+
+(defspec test-iterative-sqrt-is-correct-to-12dp 1e4
+         (prop/for-all [n gen/s-pos-int]
+                       (let [expected (Math/sqrt n)
+                             actual   (c3/√ n)]
+                         (is (approx12dp= expected actual)))))
+
+(defspec test-iterative-sqrt-is-correct-to-12dp-nat 1e4
+         (prop/for-all [n (gen/such-that pos? gen/nat 100)]
+                         (is (approx12dp= (Math/sqrt n) (c3/√ n)))))
