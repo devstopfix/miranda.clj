@@ -53,3 +53,13 @@
 (defspec test-iterative-sqrt-is-correct-to-12dp-nat 1e4
          (prop/for-all [n (gen/such-that pos? gen/nat 100)]
                          (is (approx12dp= (Math/sqrt n) (c3/√ n)))))
+
+; 3.2.3
+
+(defspec test-merge-sort 1e4
+  (prop/for-all [xs (gen/vector gen/int)]
+    (= (sort xs) (c3/merge-sort xs))))
+
+(defspec test-quick-sort 1e4
+  (prop/for-all [xs (gen/vector gen/int)]
+    (= (sort xs) (c3/quick-sort xs))))

@@ -74,3 +74,41 @@
     (if-let [p (first candidates)]
       (recur (conj accumulator p) (filter #(not= 0 (mod % p)) (rest candidates)))
       accumulator)))
+
+; 3.2.3 General Recursion
+
+;  merge [] y = y
+;  merge (a:x) [] = a:x
+;  merge (a:x) (b:y) = a:merge x (b:y), if a<=b
+;                    = b:merge (a:x) y, otherwise
+
+(defn merge-lists [xs ys]
+  "Interleaving the elements of two ordered lists, in such a way that the combined list is ordered"
+ (cond 
+    (empty? xs) ys
+    (empty? ys) xs
+    :else
+    (let [a (first xs) b (first ys)]
+      (if (<= a b)
+        (cons a (merge-lists (rest xs) ys))
+        (cons b (merge-lists xs (rest ys)))))))
+
+(defn merge-sort
+  "Merge sort a vector"
+  [xs]
+  (if (<= (count xs) 1)
+    xs
+    (let [mid (/ (count xs) 2)]
+      (merge-lists (merge-sort (take mid xs)) (merge-sort (drop mid xs))))))
+
+
+(defn quick-sort
+  "Sort a seq using the quick sort algorithm. Uses the head as the pivot."
+  [xs]
+  (if (seq xs) 
+    (let [pivot (first xs)]
+      (concat 
+        (quick-sort (filter #(< % pivot) xs))
+        (filter #(= % pivot) xs)
+        (quick-sort (filter #(> % pivot) xs))))
+    []))
