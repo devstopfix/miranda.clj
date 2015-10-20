@@ -100,6 +100,8 @@
     xs
     (let [mid (/ (count xs) 2)]
       (merge-lists (merge-sort (take mid xs)) (merge-sort (drop mid xs))))))
+; TODO efficient sub-vectors (merge-lists (merge-sort (subvec xs 0 mid)) (merge-sort (subvec xs mid (count xs)))))))
+
 
 ; Note: using the leftmost item (the head) as the pivot causes
 ; worst case behaviour for already sorted lists - but suits

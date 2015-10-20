@@ -31,22 +31,22 @@
 
 (defn benchmark-merge-sort []
   (do
-    (println "/nmerge-sort")
+    (println "\nmerge-sort")
     (bench (c3/merge-sort digits-of-π))
     (let [ordered-π (int-array (sort digits-of-π))]
-      (println "/nmerge-sort ordered")
+      (println "\nmerge-sort ordered")
       (bench (c3/merge-sort ordered-π)))
     (let [worst-π (int-array (reverse (sort digits-of-π)))]
-      (println "/nmerge-sort worst case")
+      (println "\nmerge-sort worst case")
       (bench (c3/merge-sort worst-π)))))
 
 (defn benchmark-quick-sort []
   (do
-    (println "/nquick-sort")
+    (println "\nquick-sort")
     (bench (c3/quick-sort digits-of-π))
     (let [ordered-π (int-array (sort digits-of-π))]
-      (println "/nquick-sort ordered")
+      (println "\nquick-sort ordered")
       (bench (c3/quick-sort ordered-π)))
     (let [reversed-π (int-array (reverse (sort digits-of-π)))]
-      (println "/nquick-sort reversed case")
+      (println "\nquick-sort reversed case")
       (bench (c3/quick-sort reversed-π)))))

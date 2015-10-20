@@ -80,3 +80,20 @@ Evaluation count : 62280 in 60 samples of 1038 calls.
    Execution time lower quantile : 962.837573 µs ( 2.5%)
    Execution time upper quantile : 1.199798 ms (97.5%)
                    Overhead used : 1.882870 ns
+
+^^ Use merge-sort with count over seq created by use of head and tail
+
+merge-sort
+
+Evaluation count : 71760 in 60 samples of 1196 calls.
+             Execution time mean : 863.279629 µs
+    Execution time std-deviation : 33.606146 µs
+   Execution time lower quantile : 834.284391 µs ( 2.5%)
+   Execution time upper quantile : 942.231921 µs (97.5%)
+                   Overhead used : 1.561362 ns
+
+Found 7 outliers in 60 samples (11.6667 %)
+	low-severe	 5 (8.3333 %)
+	low-mild	 2 (3.3333 %)
+ Variance from outliers : 25.4447 % Variance is moderately inflated by outliers
+
