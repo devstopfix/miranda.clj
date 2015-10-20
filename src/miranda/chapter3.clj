@@ -101,7 +101,9 @@
     (let [mid (/ (count xs) 2)]
       (merge-lists (merge-sort (take mid xs)) (merge-sort (drop mid xs))))))
 
-
+; Note: using the leftmost item (the head) as the pivot causes
+; worst case behaviour for already sorted lists - but suits
+; our use of lazy sequences.
 (defn quick-sort
   "Sort a seq using the quick sort algorithm. Uses the head as the pivot."
   [xs]

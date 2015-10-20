@@ -5,4 +5,6 @@
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/test.check "0.8.2"]
-                 [criterium "0.4.3"]])
+                 [criterium "0.4.3"]
+                 [incanter/incanter-core "1.5.6"]
+                 [incanter/incanter-charts "1.5.6"]])
