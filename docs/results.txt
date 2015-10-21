@@ -130,3 +130,35 @@ Evaluation count : 1206060 in 60 samples of 20101 calls.
    Execution time lower quantile : 48.150101 µs ( 2.5%)
    Execution time upper quantile : 69.386188 µs (97.5%)
                    Overhead used : 2.005103 ns
+Powers 2 iterated
+Evaluation count : 65100 in 60 samples of 1085 calls.
+             Execution time mean : 874.452836 µs
+    Execution time std-deviation : 136.022696 µs
+   Execution time lower quantile : 724.118407 µs ( 2.5%)
+   Execution time upper quantile : 1.100548 ms (97.5%)
+                   Overhead used : 1.667003 ns
+Powers 2 list comprehension
+Evaluation count : 49080 in 60 samples of 818 calls.
+             Execution time mean : 1.196907 ms
+    Execution time std-deviation : 189.537440 µs
+   Execution time lower quantile : 966.676841 µs ( 2.5%)
+   Execution time upper quantile : 1.726322 ms (97.5%)
+                   Overhead used : 1.667003 ns
+
+Found 4 outliers in 60 samples (6.6667 %)
+	low-severe	 2 (3.3333 %)
+	low-mild	 2 (3.3333 %)
+ Variance from outliers : 85.8867 % Variance is severely inflated by outliers
+Powers 2 mapped
+Evaluation count : 54300 in 60 samples of 905 calls.
+             Execution time mean : 1.200360 ms
+    Execution time std-deviation : 105.713701 µs
+   Execution time lower quantile : 1.019362 ms ( 2.5%)
+   Execution time upper quantile : 1.392947 ms (97.5%)
+                   Overhead used : 1.667003 ns
+
+Found 1 outliers in 60 samples (1.6667 %)
+	low-severe	 1 (1.6667 %)
+ Variance from outliers : 63.5814 % Variance is severely inflated by outliers
+
+^^ 1e4 iterations

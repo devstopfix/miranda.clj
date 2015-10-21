@@ -25,3 +25,8 @@
 (def sqrt-results
   [["Math/sqrt"      (t-to-µs  "3.334454 ns")]
    ["Newton-Raphson" (t-to-µs "58.136074 µs")]])
+
+(def powers-1e4-results
+  [["Iterated"           (t-to-µs "874.452836 µs")]
+   ["List comprehension" (t-to-µs   "1.196907 ms")]
+   ["Mapped function"    (t-to-µs   "1.200360 ms")]])

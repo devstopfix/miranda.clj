@@ -29,6 +29,18 @@
     (set-stroke-color miranda-blue)
     (save "docs/sort.png")))
 
+(defn powers-chart [results]
+  (doto
+    (bar-chart
+      (map first results)
+      (map last  results)
+      :y-label "Execution time mean (µs)"
+      :x-label "Algorithm"
+      :title "Generated seq of powers of 2"
+      :vertical false)
+    (set-stroke-color miranda-blue)
+    (save "docs/powers.png")))
+
 (defn prime-chart []
   (doto
     (bar-chart
@@ -45,4 +57,5 @@
   (do
     (sqrt-chart sqrt-results)
     (sort-chart)
+    (powers-chart powers-1e4-results)
     (prime-chart)))

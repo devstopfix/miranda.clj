@@ -35,10 +35,15 @@
 
 (deftest test-powers-of-2-iterated
   (is (= [1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768] 
-       (take 16 c3/powers-of-2-it)))
+       (take 16 c3/powers-of-2-iterated)))
   (is (= 9223372036854775808N 
-       (last (take 64 c3/powers-of-2-it)))))
+       (last (take 64 c3/powers-of-2-iterated)))))
 
+(defspec test-powers-of-2
+         (prop/for-all [n gen/pos-int]
+                       (let [reference (take n c3/powers-of-2-iterated)]
+                         (is (= reference (take n c3/powers-of-2-mapped)))
+                         (is (= reference (take n c3/powers-of-2-comprehension))))))
 
 ; 3.1.5 Square root by iteration
 
