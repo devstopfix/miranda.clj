@@ -5,6 +5,18 @@
 
 (def miranda-blue (Color/decode "#0AB7BE"))
 
+(defn sqrt-chart [results]
+  (doto
+    (bar-chart
+      (map first results)
+      (map last  results)
+      :y-label "Execution time mean (µs)"
+      :x-label "Algorithm"
+      :title "Square Root"
+      :vertical false)
+    (set-stroke-color miranda-blue)
+    (save "docs/sqrt.png")))
+
 (defn sort-chart []
   (doto
     (bar-chart
@@ -23,7 +35,7 @@
       (map first prime-results)
       (map last prime-results)
       :y-label "Execution time mean (ms)"
-      :x-label "Algorithm & dataset"
+      :x-label "Algorithm"
       :title "Prime Number Algorithms"
       :vertical false)
       (set-stroke-color miranda-blue)
@@ -31,5 +43,6 @@
 
 (defn -main []
   (do
+    (sqrt-chart sqrt-results)
     (sort-chart)
     (prime-chart)))

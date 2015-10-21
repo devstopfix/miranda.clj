@@ -116,3 +116,17 @@ Evaluation count : 180 in 60 samples of 3 calls.
    Execution time upper quantile : 653.921980 ms (97.5%)
                    Overhead used : 1.689774 ns
 nil
+Math sqrt
+Evaluation count : 9978073440 in 60 samples of 166301224 calls.
+             Execution time mean : 3.334454 ns
+    Execution time std-deviation : 0.679428 ns
+   Execution time lower quantile : 2.279181 ns ( 2.5%)
+   Execution time upper quantile : 4.353336 ns (97.5%)
+                   Overhead used : 2.005103 ns
+Iterate sqrt
+Evaluation count : 1206060 in 60 samples of 20101 calls.
+             Execution time mean : 58.136074 µs
+    Execution time std-deviation : 6.676613 µs
+   Execution time lower quantile : 48.150101 µs ( 2.5%)
+   Execution time upper quantile : 69.386188 µs (97.5%)
+                   Overhead used : 2.005103 ns
