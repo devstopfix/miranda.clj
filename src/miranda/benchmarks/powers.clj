@@ -2,16 +2,14 @@
   (:use [criterium.core])
   (:require [miranda.chapter3 :as c3]))
 
-(def MAX (int 1e5))
-
 (defn benchmark-powers []
-  (do
-    (println "Powers 2 list comprehension")
+  (doseq [n [10 100 1000]]
+    (println (format "Powers 2 iterated - %d iterations" n))
     (bench
-      (last (take MAX c3/powers-of-2-comprehension)))
-    (println "Powers 2 iterated")
+      (last (take n c3/powers-of-2-iterated)) :os)
+    (println (format "Powers 2 list comprehension - %d iterations" n))
     (bench
-      (last (take MAX c3/powers-of-2-iterated)))
-    (println "Powers 2 mapped")
+      (last (take n c3/powers-of-2-comprehension)))
+    (println (format "Powers 2 mapped - %d iterations" n))
     (bench
-      (last (take MAX c3/powers-of-2-mapped)))))
+      (last (take n c3/powers-of-2-mapped)))))

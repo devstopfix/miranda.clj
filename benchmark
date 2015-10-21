@@ -8,4 +8,4 @@ export LEIN_JVM_OPTS=
 #lein run -m miranda.benchmarks.primes/benchmark-primes >> docs/results.txt
 #lein run -m miranda.benchmarks.simple/benchmark-sqrt >> docs/results.txt
 
-lein run -m miranda.benchmarks.powers/benchmark-powers >> docs/results.txt
+lein run -m miranda.benchmarks.powers/benchmark-powers >> docs/results-powers.txt
