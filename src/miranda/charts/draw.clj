@@ -57,5 +57,5 @@
   (do
     (sqrt-chart sqrt-results)
     (sort-chart)
-    (powers-chart powers-1e4-results)
+    (powers-chart powers-1e5-results)
     (prime-chart)))

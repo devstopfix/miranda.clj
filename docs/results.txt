@@ -130,6 +130,10 @@ Evaluation count : 1206060 in 60 samples of 20101 calls.
    Execution time lower quantile : 48.150101 µs ( 2.5%)
    Execution time upper quantile : 69.386188 µs (97.5%)
                    Overhead used : 2.005103 ns
+
+Powers 1e4 iterations
+=====================
+
 Powers 2 iterated
 Evaluation count : 65100 in 60 samples of 1085 calls.
              Execution time mean : 874.452836 µs
@@ -161,4 +165,54 @@ Found 1 outliers in 60 samples (1.6667 %)
 	low-severe	 1 (1.6667 %)
  Variance from outliers : 63.5814 % Variance is severely inflated by outliers
 
-^^ 1e4 iterations
+Powers 1e5 iterations
+=====================
+Powers 2 iterated
+Evaluation count : 3300 in 60 samples of 55 calls.
+             Execution time mean : 11.947524 ms
+    Execution time std-deviation : 1.834242 ms
+   Execution time lower quantile : 10.790088 ms ( 2.5%)
+   Execution time upper quantile : 18.262164 ms (97.5%)
+                   Overhead used : 1.785802 ns
+
+Found 6 outliers in 60 samples (10.0000 %)
+	low-severe	 6 (10.0000 %)
+ Variance from outliers : 84.2017 % Variance is severely inflated by outliers
+
+Powers 2 list comprehension
+
+   (FAILED with out of heap space)
+
+
+2GB heap
+========
+
+Powers 2 list comprehension
+Evaluation count : 5280 in 60 samples of 88 calls.
+             Execution time mean : 11.659372 ms
+    Execution time std-deviation : 251.252760 µs
+   Execution time lower quantile : 11.347119 ms ( 2.5%)
+   Execution time upper quantile : 12.315650 ms (97.5%)
+                   Overhead used : 1.691103 ns
+
+Found 4 outliers in 60 samples (6.6667 %)
+	low-severe	 4 (6.6667 %)
+ Variance from outliers : 9.4392 % Variance is slightly inflated by outliers
+Powers 2 iterated
+Evaluation count : 4200 in 60 samples of 70 calls.
+             Execution time mean : 12.791603 ms
+    Execution time std-deviation : 589.115093 µs
+   Execution time lower quantile : 12.068450 ms ( 2.5%)
+   Execution time upper quantile : 13.891995 ms (97.5%)
+                   Overhead used : 1.691103 ns
+Powers 2 mapped
+Evaluation count : 2340 in 60 samples of 39 calls.
+             Execution time mean : 27.647506 ms
+    Execution time std-deviation : 1.347174 ms
+   Execution time lower quantile : 26.470063 ms ( 2.5%)
+   Execution time upper quantile : 32.396750 ms (97.5%)
+                   Overhead used : 1.691103 ns
+
+Found 3 outliers in 60 samples (5.0000 %)
+	low-severe	 3 (5.0000 %)
+ Variance from outliers : 35.1921 % Variance is moderately inflated by outliers

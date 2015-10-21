@@ -37,9 +37,11 @@
   (.pow TWO n))
 
 (def powers-of-2-comprehension
+  "Return lazy seq of the powers of 2"
   (for [n (range)] (big-pow n)))
 
 (def powers-of-2-mapped
+  "Return lazy seq of the powers of 2"
   (map big-pow (range)))
 
 (def powers-of-2-iterated

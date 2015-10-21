@@ -30,3 +30,11 @@
   [["Iterated"           (t-to-µs "874.452836 µs")]
    ["List comprehension" (t-to-µs   "1.196907 ms")]
    ["Mapped function"    (t-to-µs   "1.200360 ms")]])
+
+(def powers-1e5-results
+  [["Iterated (1e4)"           (t-to-µs "874.452836 µs")]
+   ["Iterated (1e5)"           (t-to-µs  "11.947524 ms")]
+   ["List comprehension (1e4)" (t-to-µs   "1.196907 ms")]
+   ["List comprehension (1e5)" (t-to-µs  "11.659372 ms")]
+   ["Mapped function (1e4)"    (t-to-µs   "1.200360 ms")]
+   ["Mapped function (1e5)"    (t-to-µs  "27.647506 ms")]])
