@@ -1,1 +1,1 @@
-lein run -m miranda.benchmarks.charts
+lein run -m miranda.charts.draw

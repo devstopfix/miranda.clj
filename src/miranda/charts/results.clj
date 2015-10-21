@@ -1,17 +1,13 @@
-(ns miranda.benchmarks.charts
-  (:use [incanter core charts])
-  (:import (java.awt Color)))
-
-(def miranda-blue (Color/decode "#06b5ba"))
+(ns miranda.charts.results)
 
 (defn t-to-µs [s]
   (let [conversion {"ms" 1000 "µs" 1}]
     (if-let [[x t units] (re-matches #"([\d.]+) (µs|ms)" s)]
       (-> (read-string t)
-        (* (get conversion units)))
-    0)))
+          (* (get conversion units)))
+      0)))
 
-(def results
+(def sort-results
   [
    ["array-sort"           (t-to-µs   "0.098702 ms")]
    ["quick-sort"           (t-to-µs "164.110072 µs")]
@@ -23,14 +19,9 @@
    ;["merge-sort reversed" (t-to-µs   "2.302531 ms")]
    ])
 
-(defn -main []
-  (doto
-    (bar-chart
-      (map first results)
-      (map last results)
-      :y-label "Execution time mean (µs)"
-      :x-label "Algorithm & dataset"
-      :title "Sort Algorithms"
-      :vertical false)
-      (set-stroke-color miranda-blue)
-      (save "docs/sort.png")))
+(def prime-results
+  [
+   ["Sieved" 444.641263]
+   ["Brute"  527.674280]])
+
+

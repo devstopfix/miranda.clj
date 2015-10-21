@@ -3,5 +3,7 @@
 # Allow compilation (https://github.com/technomancy/leiningen/wiki/Faster)
 export LEIN_JVM_OPTS=
 
-lein run -m miranda.benchmarks.sorts/benchmark-merge-sort >> docs/results.txt
+#lein run -m miranda.benchmarks.sorts/benchmark-merge-sort >> docs/results.txt
 #lein run -m miranda.benchmarks.sorts/benchmark-quick-sort >> docs/results.txt
+
+lein run -m miranda.benchmarks.primes/benchmark-primes >> docs/results.txt
