@@ -1,4 +1,4 @@
-(defproject miranda "1.3.2"
+(defproject miranda "1.3.3"
   :description "Functional Programming with Miranda in Clojure"
   :url "https://github.com/devstopfix/miranda.clj"
   :license {:name "The MIT License (MIT)"
