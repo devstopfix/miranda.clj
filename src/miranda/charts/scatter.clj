@@ -19,7 +19,7 @@
 (defn filter-outliers [field ds]
   "Remove outliers from dataset (99th percentile).
    May be necessary to remove slow results while JVM is warming up"
-  (let [max (max-value field 0.99 ds)]
+  (let [max (max-value field 0.95 ds)]
     ($where {field {:$lt max}} ds)))
 
 (defn scatter-plot-dataset [name]

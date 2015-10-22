@@ -30,5 +30,5 @@
 ; lein run -m miranda.profile.sort > docs/sort.tsv
 (defn -main []
   (println (clojure.string/join \tab ["algorithm" "count" "distinct" "elapsed-µs"]))
-  (profile-sort 'c3/quick-sort 512 2048)
-  (profile-sort 'c3/merge-sort 512 2048))
+  (profile-sort 'c3/quick-sort 128 128)
+  (profile-sort 'c3/merge-sort 128 128))
